@@ -1,0 +1,42 @@
+.vistas{
+    color: white;
+    background-color: slateblue;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.margen1{
+    font-size: x-large;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    border-top: unset;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-right-width: 1px;
+    border-style: solid;
+    border-color: darkblue;
+}
+
+.margen2{
+    font-size: x-large;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    border-top: unset;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-left-width: 1px;
+    border-style: solid;
+    border-color: darkblue;
+}
