@@ -10,16 +10,20 @@
     border-color: darkblue;
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
-.borde{
-    
-    border-top: unset;
-    border-collapse: collapse;
-    border-width: 2px;
-    border-right-width: 1px;
-    border-style: solid;
-    border-color: darkblue;
+.logoGit{
+    margin-right: 30%;
+    text-align: left;
+    align-content: left;
+    justify-content: center;
+}
+
+.miLogo{
+    margin-left: 30%;
+    text-align: right;
+    align-items: right;
+    justify-content: center;
 }
