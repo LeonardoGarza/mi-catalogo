@@ -1,0 +1,29 @@
+.list{
+    font-size: x-large;
+    width: 100%;
+
+    display: flex;
+}
+
+.icono{
+    border-radius: 20px 0px 0px 20px;
+    padding: 1%;
+    padding-left: 2%;
+    align-items: center;
+    background-color: moccasin;
+    margin-top: 1%;
+    width: 50%;
+    margin-left: 5%;
+}
+
+.texto{
+    border-radius: 0px 20px 20px 0px;
+    padding: 1%;
+    padding-right: 2%;
+    background-color: moccasin;
+    margin-top: 1%;
+    width: 50%;
+    align-items: center;
+    text-align: right;
+    margin-right: 5%;
+}
