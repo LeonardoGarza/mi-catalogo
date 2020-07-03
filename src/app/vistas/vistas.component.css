@@ -1,6 +1,6 @@
 .vistas{
-    color: white;
-    background-color: slateblue;
+    font-family: serif;
+    background-color: rgb(255, 220, 160);
     width: 100%;
     height: 50px;
     display: flex;
@@ -21,7 +21,7 @@
     border-width: 2px;
     border-right-width: 1px;
     border-style: solid;
-    border-color: darkblue;
+    border-color: lightsalmon;
 }
 
 .margen2{
@@ -37,5 +37,5 @@
     border-width: 2px;
     border-left-width: 1px;
     border-style: solid;
-    border-color: darkblue;
+    border-color: lightsalmon;
 }

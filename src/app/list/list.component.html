@@ -1,4 +1,36 @@
-<div class='list' *ngFor='let auto of autos'>
-    <div class="icono"><fa-icon [icon]="faEye"></fa-icon></div>
-    <div class="texto">{{auto.descripcion}}</div>
-</div>
+<ng-container *ngFor='let auto of autos'>
+    <div class='list'>
+        <div class="icono"><fa-icon [icon]="faEye" (click)="onSelect(auto, content)"></fa-icon></div>
+        <div class="texto">{{auto.descripcion}}</div>
+    </div>
+</ng-container>
+
+<ng-template #content let-modal>
+    <div  class="ventana">
+        <div class="modal-header">
+        <h4 class="modal-title" id="Detalles"><b>Detalles Automóvil</b></h4>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        <div class="modal-body">
+        <form>
+            <div class="detallesAuto">
+                <b><label class="gris">Marca:</label> {{autoSeleccionado?.marca}}</b>
+            <div class="detallesAuto">
+                <b><label class="gris">Submarca:</label> {{autoSeleccionado?.submarca}}</b>
+            </div>
+            <div class="detallesAuto">
+                <b><label class="gris">Modelo:</label> {{autoSeleccionado?.modelo}}</b>
+            </div>
+            <div class="detallesAuto">
+                <b><label class="gris">Descripción:</label> {{autoSeleccionado?.descripcion}}</b>
+            </div>
+            <div class="detallesAuto">
+                <b><label class="gris">Registro:</label> {{autoSeleccionado?.fecha_registro | date : "MMM dd, yyyy"}}</b>
+            </div>
+            </div>
+        </form>
+        </div>
+    </div>
+  </ng-template>
