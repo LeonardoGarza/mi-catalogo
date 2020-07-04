@@ -39,3 +39,12 @@
     border-style: solid;
     border-color: lightsalmon;
 }
+
+.vinculos{
+    text-decoration: none;
+    color: black;
+}
+
+.active{
+    color: darkgray;
+}
