@@ -9,6 +9,7 @@ import { ListComponent } from './list/list.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TableComponent } from './table/table.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TableComponent } from './table/table.component';
     HeaderComponent,
     VistasComponent,
     ListComponent,
-    TableComponent
+    TableComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
