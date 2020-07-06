@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Automovil } from '../models';
-import { AUTOMOVILES } from '../data'
+import { AUTOMOVILES } from '../data';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
-import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap"
+import { NgbModal, ModalDismissReasons } from "@ng-bootstrap/ng-bootstrap";
 
 @Component({
   selector: 'app-list',
