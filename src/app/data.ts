@@ -10,7 +10,7 @@ export const AUTOMOVILES: Automovil[] = [
 
         submarca: 'Corolla',
 
-        modelo: 2010,
+        modelos: [ 2010 ],
 
         descripcion: 'Toyota Corolla 4 Puertas Estandar',
 
@@ -24,7 +24,7 @@ export const AUTOMOVILES: Automovil[] = [
 
         submarca: 'Civic',
 
-        modelo: 2018,
+        modelos: [ 2018 ],
 
         descripcion: 'Honda Civic 4 Puertas Automático',
 
@@ -38,7 +38,7 @@ export const AUTOMOVILES: Automovil[] = [
 
         submarca: 'Civic',
 
-        modelo: 2018,
+        modelos: [ 2018 ],
 
         descripcion: 'Honda Civic 4 Puertas Estandar',
 
@@ -52,7 +52,7 @@ export const AUTOMOVILES: Automovil[] = [
 
         submarca: 'Camry',
 
-        modelo: 2010,
+        modelos: [ 2010 ],
 
         descripcion: 'Toyota Camry 4 Puertas Estandar',
 
@@ -66,7 +66,7 @@ export const AUTOMOVILES: Automovil[] = [
 
         submarca: 'City',
 
-        modelo: 2010,
+        modelos: [ 2010 ],
 
         descripcion: 'Honda City 5 Puertas Automático Asientos Piel',
 
