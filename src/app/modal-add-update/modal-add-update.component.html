@@ -1,0 +1,31 @@
+<div class="ventana">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title"><b>{{accion}}</b></h4>
+        <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Lo cerre')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <div class="form-group">
+            <b><label for="marca">Marca</label></b>
+            <input type="text" class="form-control" id="marca" placeholder="Agrega la marca">
+        </div>
+        <div class="form-group">
+            <b><label for="marca">Submarca</label></b>
+            <input type="text" class="form-control" id="submarca" placeholder="Agrega la submarca">
+        </div>
+        <div class="form-group">
+            <b><label for="marca">Descripcion</label></b>
+            <input type="text" class="form-control" id="descripcion" placeholder="Agrega la descripcion">
+        </div>
+        <div class="form-group">
+            <b><label for="marca">Modelos</label></b>
+            <input type="text" disabled class="form-control" id="modelos" placeholder="Agrega los modelos">
+        </div>
+
+        <div class="modal-group">
+            <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Save click')"><b>Guardar</b></button>
+        </div>
+
+    </div>
+</div>

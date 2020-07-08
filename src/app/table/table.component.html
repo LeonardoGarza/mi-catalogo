@@ -1,4 +1,5 @@
 <ngb-pagination [collectionSize]="40" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+<div class="botonAgregar"><button type="button" class="btn btn-outline-dark" (click)="openModalAgregar()"><b>Agregar</b></button></div>
 <table class="table table-striped">
   <thead class="letra">
   <tr>
@@ -15,7 +16,7 @@
     <td>{{ auto.submarca }}</td>
     <td>{{ auto.descripcion }}</td>
     <td><fa-icon [icon]="faTrashAlt"></fa-icon></td>
-    <td><fa-icon [icon]="faEdit"></fa-icon></td>
+    <td><fa-icon [icon]="faEdit" (click)="openModalEditar(auto)"></fa-icon></td>
   </tr>
   </tbody>
 </table>

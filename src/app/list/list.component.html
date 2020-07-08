@@ -1,34 +1,7 @@
 <ngb-pagination [collectionSize]="40" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
 <ng-container *ngFor='let auto of autos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize'>
     <div class='list'>
-        <div class="icono"><fa-icon [icon]="faEye" (click)="onSelect(auto, content)"></fa-icon></div>
+        <div class="icono"><fa-icon [icon]="faEye" (click)="onSelect(auto)"></fa-icon></div>
         <div class="texto">{{auto.descripcion}}</div>
     </div>
 </ng-container>
-
-<ng-template #content let-modal>
-    <div  class="ventana">
-        <div class="modal-header">
-        <h4 class="modal-title" id="Detalles"><b>Detalles Automóvil</b></h4>
-        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-            <span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-        <div class="modal-body">
-        <form>
-            <div class="detallesAuto">
-                <b><label class="gris">Marca:</label> {{autoSeleccionado?.marca}}</b>
-            </div>
-            <div class="detallesAuto">
-                <b><label class="gris">Submarca:</label> {{autoSeleccionado?.submarca}}</b>
-            </div>
-            <div class="detallesAuto">
-                <b><label class="gris">Modelos:</label> {{autoSeleccionado?.modelos}}</b>
-            </div>
-            <div class="detallesAuto">
-                <b><label class="gris">Descripción:</label> {{autoSeleccionado?.descripcion}}</b>
-            </div>
-        </form>
-        </div>
-    </div>
-  </ng-template>

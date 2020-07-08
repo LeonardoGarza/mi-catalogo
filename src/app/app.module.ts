@@ -11,6 +11,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { TableComponent } from './table/table.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ModalAddUpdateComponent } from './modal-add-update/modal-add-update.component';
+import { ModalDetallesAutoComponent } from './modal-detalles-auto/modal-detalles-auto.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     ListComponent,
     TableComponent,
     PageNotFoundComponent,
+    ModalAddUpdateComponent,
+    ModalDetallesAutoComponent,
   ],
   imports: [
     BrowserModule,
@@ -29,6 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [ModalDetallesAutoComponent, ModalAddUpdateComponent]
 })
 export class AppModule { }
