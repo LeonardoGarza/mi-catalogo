@@ -6,26 +6,33 @@
         </button>
     </div>
     <div class="modal-body">
-        <div class="form-group">
-            <b><label for="marca">Marca</label></b>
-            <input type="text" class="form-control" id="marca" placeholder="Agrega la marca">
-        </div>
-        <div class="form-group">
-            <b><label for="marca">Submarca</label></b>
-            <input type="text" class="form-control" id="submarca" placeholder="Agrega la submarca">
-        </div>
-        <div class="form-group">
-            <b><label for="marca">Descripcion</label></b>
-            <input type="text" class="form-control" id="descripcion" placeholder="Agrega la descripcion">
-        </div>
-        <div class="form-group">
-            <b><label for="marca">Modelos</label></b>
-            <input type="text" disabled class="form-control" id="modelos" placeholder="Agrega los modelos">
-        </div>
+        <form #formAutos="ngForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <b><label for="marca">Marca</label></b>
+                <input type="text" class="form-control" id="marca" placeholder="Agrega la marca" required
+                [(ngModel)]="auto.marca" name="marca" #marca="ngModel">
+            </div>
+            <div [hidden]="marca.valid || marca.pristine" class='alert alert-danger'>
+                La marca es requerida
+            </div>
 
-        <div class="modal-group">
-            <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Save click')"><b>Guardar</b></button>
-        </div>
+            <div class="form-group">
+                <b><label for="marca">Submarca</label></b>
+                <input type="text" class="form-control" id="submarca" placeholder="Agrega la submarca" [(ngModel)]="auto.submarca" name="submarca">
+            </div>
+            <div class="form-group">
+                <b><label for="marca">Descripcion</label></b>
+                <input type="text" class="form-control" id="descripcion" placeholder="Agrega la descripcion" [(ngModel)]="auto.descripcion" name="descripcion">
+            </div>
+            <div class="form-group">
+                <b><label for="marca">Modelos</label></b>
+                <input type="text" class="form-control" id="modelos" placeholder="Agrega los modelos" 
+                [(ngModel)]="auto.modelos" name="modelos">
+            </div>
 
+            <div class="modal-group">
+                <button type="submit" class="btn btn-outline-dark" [disabled]="!formAutos.form.valid"><b>Guardar</b></button>
+            </div>
+        </form>
     </div>
 </div>

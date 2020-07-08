@@ -7,13 +7,20 @@ import { Automovil } from '../models';
   templateUrl: './modal-add-update.component.html',
   styleUrls: ['./modal-add-update.component.css']
 })
-
-export class ModalAddUpdateComponent {
+export class ModalAddUpdateComponent implements OnInit{
 
   accion: String;
 
-  auto: Automovil;
+  auto: Automovil = {} as Automovil;
 
   constructor(public activeModal: NgbActiveModal) { }
+  
+  ngOnInit(){
+
+  }
+
+  onSubmit(){
+    this.activeModal.close(this.auto);
+  }
 
 }

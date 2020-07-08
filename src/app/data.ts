@@ -2,7 +2,7 @@ import { Automovil } from './models';
 
 
 
-export const AUTOMOVILES: Automovil[] = [
+/*export const AUTOMOVILES: Automovil[] = [
 
     {
 
@@ -77,3 +77,4 @@ export const AUTOMOVILES: Automovil[] = [
 
 
 ]
+*/

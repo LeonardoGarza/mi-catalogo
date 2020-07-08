@@ -1,0 +1,17 @@
+<div class="ventana">
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title"><b>Eliminar</b></h4>
+        <button type="button" class="close" aria-describedby="modal-title" (click)="activeModal.dismiss('Lo cerre')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <b><label class="text-dark">Estas seguro que deseas eliminar el automovil <span class="text-dark">{{ auto.descripcion }}</span></label></b>
+        <br/>
+        <b><span class="text-danger">Esta operación no puede ser regresada</span></b>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-outline-secondary" (click)="activeModal.dismiss('cancel click')">Cancel</button>
+            <button type="button" class="btn btn-danger" (click)="activeModal.close(auto)"><b>Ok</b></button>
+        </div>
+    </div>
+</div>

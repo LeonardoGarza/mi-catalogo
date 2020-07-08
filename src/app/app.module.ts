@@ -13,6 +13,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HttpClientModule } from '@angular/common/http';
 import { ModalAddUpdateComponent } from './modal-add-update/modal-add-update.component';
 import { ModalDetallesAutoComponent } from './modal-detalles-auto/modal-detalles-auto.component';
+import { ModalConfirmActionComponent } from './modal-confirm-action/modal-confirm-action.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,16 +26,18 @@ import { ModalDetallesAutoComponent } from './modal-detalles-auto/modal-detalles
     PageNotFoundComponent,
     ModalAddUpdateComponent,
     ModalDetallesAutoComponent,
+    ModalConfirmActionComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FontAwesomeModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ModalDetallesAutoComponent, ModalAddUpdateComponent]
+  entryComponents: [ModalDetallesAutoComponent, ModalAddUpdateComponent, ModalConfirmActionComponent]
 })
 export class AppModule { }
