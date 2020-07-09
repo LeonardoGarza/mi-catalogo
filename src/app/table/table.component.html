@@ -10,6 +10,15 @@
     <th scope="col">Modelos</th>
   </tr>
   </thead>
+
+  <tbody>
+    <tr *ngIf="displayProgresBar">
+      <th colspan="5">
+        <ngb-progressbar type="dark" [value]="100" [striped]=true [animated]=true></ngb-progressbar>
+      </th>
+    </tr>
+  </tbody>
+
   <tbody class="letra">
   <tr *ngFor="let auto of autos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
       <th scope="row">{{ auto._id }}</th>

@@ -12,6 +12,8 @@ import { ModalDetallesAutoComponent } from '../modal-detalles-auto/modal-detalle
 })
 export class ListComponent implements OnInit {
 
+  displayProgresBar: boolean;
+
   page: number;
   pageSize: number;
 
@@ -20,10 +22,14 @@ export class ListComponent implements OnInit {
   constructor(private autoService: AutosService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
+    this.displayProgresBar = true;
     this.page = 1;
     this.pageSize = 10;
     this.autoService.getAutos().subscribe((response)=>{
-      this.autos = response.data;
+      setTimeout(()=>{
+        this.displayProgresBar = false;
+        this.autos = response.data;
+      }, 1000)
     });
 
   }

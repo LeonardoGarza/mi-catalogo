@@ -1,4 +1,9 @@
 <ngb-pagination [collectionSize]="40" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+<div *ngIf="displayProgresBar">
+    <div colspan="5">
+        <ngb-progressbar type="dark" [value]="100" [striped]=true [animated]=true></ngb-progressbar>
+    </div>
+</div>
 <ng-container *ngFor='let auto of autos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize'>
     <div class='list'>
         <div class="icono"><fa-icon [icon]="faEye" (click)="onSelect(auto)"></fa-icon></div>

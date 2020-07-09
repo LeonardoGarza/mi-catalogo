@@ -13,6 +13,8 @@ import { ModalConfirmActionComponent } from '../modal-confirm-action/modal-confi
 })
 export class TableComponent implements OnInit {
 
+  displayProgresBar: boolean;
+
   faTrashAlt = faTrashAlt;
   faEdit = faEdit;
   faPlus = faPlus;
@@ -27,10 +29,14 @@ export class TableComponent implements OnInit {
   constructor(private autoService: AutosService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
+    this.displayProgresBar = true;
     this.page = 1;
     this.pageSize = 10;
     this.autoService.getAutos().subscribe((response)=>{
-      this.autos = response.data;
+      setTimeout(()=>{
+        this.displayProgresBar = false;
+        this.autos = response.data;
+      }, 1000)
     });
   }
 
