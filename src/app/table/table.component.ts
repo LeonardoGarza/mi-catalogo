@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Automovil } from '../models';
 import { AutosService } from "../services/autos.service"
-import { faTrashAlt, faEdit, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faTrashAlt, faEdit, faPlus, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { ModalAddUpdateComponent } from '../modal-add-update/modal-add-update.component';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ModalConfirmActionComponent } from '../modal-confirm-action/modal-confirm-action.component';
@@ -13,11 +13,14 @@ import { ModalConfirmActionComponent } from '../modal-confirm-action/modal-confi
 })
 export class TableComponent implements OnInit {
 
+  searchText;
+
   displayProgresBar: boolean;
 
   faTrashAlt = faTrashAlt;
   faEdit = faEdit;
   faPlus = faPlus;
+  faSearch = faSearch;
 
   page: number;
   pageSize: number;

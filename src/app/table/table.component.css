@@ -5,3 +5,8 @@
 .botonAgregar{
     margin-bottom: 10px;
 }
+
+div.input-group{
+    width: 30%;
+    margin: 10px;
+}

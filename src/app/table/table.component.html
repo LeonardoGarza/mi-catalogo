@@ -1,5 +1,14 @@
 <ngb-pagination [collectionSize]="40" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
 <div class="botonAgregar"><button type="button" class="btn btn-dark" (click)="openModalAgregar()"><b>Agregar </b><fa-icon [icon]="faPlus"></fa-icon></button></div>
+
+<div class="input-group">
+  <div class="input-group-prepend">
+    <div class="input-group-text"><fa-icon [icon]="faSearch"></fa-icon></div>
+  </div>
+  <input type="text" class="form-control" id="inlineFormInputGroupUsername" 
+  placeholder="¿Qué deseas buscar en la tabla?" [(ngModel)]="searchText" autocomplete="off">
+</div>
+
 <table class="table table-striped">
   <thead class="letra">
   <tr>
@@ -20,7 +29,7 @@
   </tbody>
 
   <tbody class="letra">
-  <tr *ngFor="let auto of autos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+  <tr *ngFor="let auto of autos | filter:searchText | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
       <th scope="row">{{ auto._id }}</th>
     <td>{{ auto.marca }}</td>
     <td>{{ auto.submarca }}</td>
