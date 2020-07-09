@@ -15,6 +15,7 @@ import { ModalAddUpdateComponent } from './modal-add-update/modal-add-update.com
 import { ModalDetallesAutoComponent } from './modal-detalles-auto/modal-detalles-auto.component';
 import { ModalConfirmActionComponent } from './modal-confirm-action/modal-confirm-action.component';
 import { FormsModule } from '@angular/forms';
+import { ValidacionModelosDirective } from './directives/validacion-modelos.directive';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { FormsModule } from '@angular/forms';
     PageNotFoundComponent,
     ModalAddUpdateComponent,
     ModalDetallesAutoComponent,
-    ModalConfirmActionComponent
+    ModalConfirmActionComponent,
+    ValidacionModelosDirective
   ],
   imports: [
     BrowserModule,

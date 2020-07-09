@@ -10,24 +10,35 @@
             <div class="form-group">
                 <b><label for="marca">Marca</label></b>
                 <input type="text" class="form-control" id="marca" placeholder="Agrega la marca" required
-                [(ngModel)]="auto.marca" name="marca" #marca="ngModel">
+                minlength="4" [(ngModel)]="auto.marca" name="marca" #marca="ngModel">
             </div>
-            <div [hidden]="marca.valid || marca.pristine" class='alert alert-danger'>
-                La marca es requerida
+            <div *ngIf="marca.invalid && (marca.dirty || marca.touched)">
+                <div *ngIf="marca.errors.minlength" class='alert alert-danger'>La marca debe tener un mínimo de 4 caracteres</div>
+                <div *ngIf="marca.errors.required" class='alert alert-danger'>La marca es requerida</div>
             </div>
 
             <div class="form-group">
-                <b><label for="marca">Submarca</label></b>
-                <input type="text" class="form-control" id="submarca" placeholder="Agrega la submarca" [(ngModel)]="auto.submarca" name="submarca">
+                <b><label for="submarca">Submarca</label></b>
+                <input type="text" class="form-control" id="submarca" placeholder="Agrega la submarca" required
+                minlength="4" [(ngModel)]="auto.submarca" name="submarca" #submarca="ngModel">
             </div>
+            <div *ngIf="submarca.invalid && (submarca.dirty || submarca.touched)">
+                <div *ngIf="submarca.errors.minlength" class='alert alert-danger'>La marca debe tener un mínimo de 4 caracteres</div>
+                <div *ngIf="submarca.errors.required" class='alert alert-danger'>La marca es requerida</div>
+            </div>
+
             <div class="form-group">
-                <b><label for="marca">Descripcion</label></b>
+                <b><label for="descripcion">Descripcion</label></b>
                 <input type="text" class="form-control" id="descripcion" placeholder="Agrega la descripcion" [(ngModel)]="auto.descripcion" name="descripcion">
             </div>
+
             <div class="form-group">
-                <b><label for="marca">Modelos</label></b>
+                <b><label for="modelos">Modelos</label></b>
                 <input type="text" class="form-control" id="modelos" placeholder="Agrega los modelos" 
-                [(ngModel)]="auto.modelos" name="modelos">
+                [(ngModel)]="auto.modelos" name="modelos" appValidacionModelos="valido" #modelos="ngModel">
+            </div>
+            <div *ngIf="modelos.invalid">
+                <div *ngIf="modelos.errors.validacionModelos" class='alert alert-danger'>El modelo es inválido, debe escribir los años entre 2000 y 2020 separados solo por comas ",". Ejemplo= "2017,2018,2019"</div>
             </div>
 
             <div class="modal-group">
