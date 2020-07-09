@@ -16,6 +16,7 @@ import { ModalDetallesAutoComponent } from './modal-detalles-auto/modal-detalles
 import { ModalConfirmActionComponent } from './modal-confirm-action/modal-confirm-action.component';
 import { FormsModule } from '@angular/forms';
 import { ValidacionModelosDirective } from './directives/validacion-modelos.directive';
+import { FormatoModelosPipe } from './pipes/formato-modelos.pipe';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ValidacionModelosDirective } from './directives/validacion-modelos.dire
     ModalAddUpdateComponent,
     ModalDetallesAutoComponent,
     ModalConfirmActionComponent,
-    ValidacionModelosDirective
+    ValidacionModelosDirective,
+    FormatoModelosPipe
   ],
   imports: [
     BrowserModule,

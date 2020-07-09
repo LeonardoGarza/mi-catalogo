@@ -7,6 +7,7 @@
     <th scope="col">Marca</th>
     <th scope="col">Submarca</th>
     <th scope="col">Descripcion</th>
+    <th scope="col">Modelos</th>
   </tr>
   </thead>
   <tbody class="letra">
@@ -15,6 +16,7 @@
     <td>{{ auto.marca }}</td>
     <td>{{ auto.submarca }}</td>
     <td>{{ auto.descripcion }}</td>
+    <td>{{ auto.modelos | formatoModelos }}</td>
     <td><fa-icon [icon]="faTrashAlt" (click)="openModalConfirmarEliminar(auto)"></fa-icon></td>
     <td><fa-icon [icon]="faEdit" (click)="openModalEditar(auto)"></fa-icon></td>
   </tr>
