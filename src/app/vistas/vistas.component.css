@@ -36,6 +36,23 @@
     border-collapse: collapse;
     border-width: 2px;
     border-left-width: 1px;
+    border-right-width: 1px;
+    border-style: solid;
+    border-color: lightsalmon;
+}
+
+.margen3{
+    font-size: x-large;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    height: 100%;
+    border-top: unset;
+    border-collapse: collapse;
+    border-width: 2px;
+    border-left-width: 1px;
     border-style: solid;
     border-color: lightsalmon;
 }

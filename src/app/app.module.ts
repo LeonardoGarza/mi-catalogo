@@ -18,6 +18,7 @@ import { FormsModule } from '@angular/forms';
 import { ValidacionModelosDirective } from './directives/validacion-modelos.directive';
 import { FormatoModelosPipe } from './pipes/formato-modelos.pipe';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { LogComponent } from './log/log.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
     ModalDetallesAutoComponent,
     ModalConfirmActionComponent,
     ValidacionModelosDirective,
-    FormatoModelosPipe
+    FormatoModelosPipe,
+    LogComponent
   ],
   imports: [
     BrowserModule,

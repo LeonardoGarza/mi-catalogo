@@ -27,7 +27,7 @@ export class TableComponent implements OnInit {
 
   autos: Automovil[];
 
-  auto: Automovil;
+  auto: Automovil = {} as Automovil;
 
   constructor(private autoService: AutosService, private modalService: NgbModal) { }
 
@@ -52,7 +52,7 @@ export class TableComponent implements OnInit {
       (auto) => {
         this.autoService.updateAutos(auto).subscribe(response => console.log(response));
         sessionStorage.setItem('currentPage', this.page.toString());
-        this.ngOnInit;
+        this.ngOnInit();
       },
       (reason) => {
         console.log(reason)
@@ -83,6 +83,7 @@ export class TableComponent implements OnInit {
     modalRef.result.then(
       (autoTemp) => {
         this.autoService.deleteAuto(autoTemp).subscribe(response => {
+          console.log(response);
           sessionStorage.setItem('currentPage', this.page.toString());
           this.ngOnInit();
         })
